@@ -10,25 +10,41 @@ layout: default
   {{ content }}
 
   {%- if site.posts.size > 0 -%}
-    <h2 class="post-list-heading">{{ page.list_title | default: "Posts" }}</h2>
-    <ul class="post-list">
+    <h2 class="lesson-list-heading">Lessons</h2>
+    <table class="lesson-list">
+      <tr>
+        <th class="lesson-title">Lesson</th>
+        <th class="lesson-site">Site</th>
+        <th class="lesson-repo">Repository</th>
+        <th class="lesson-maintainer">Maintainer(s)</th>
+      </tr>
       {%- for post in site.posts -%}
-      <li>
-        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-        <span class="post-meta">{{ post.date | date: date_format }}</span>
-        <h3>
-          <a class="post-link" href="{{ post.url | relative_url }}">
+      <tr>
+        <td class="lesson-title">
+          <a href="{{ post.site-url | absolute_url }}">
             {{ post.title | escape }}
           </a>
-        </h3>
-        {%- if site.show_excerpts -%}
-          {{ post.excerpt }}
-        {%- endif -%}
-      </li>
+        </td>
+        <td class="lesson-site">
+          {%- if post.site-url -%}
+          <a href="{{ post.site-url }}" target="_blank" class="icon-browser" title="Website for {{ post.title }}">
+            <img src="assets/desktop-monitor.png" />
+          </a>
+          {%- endif -%}
+        </td>
+        <td class="lesson-repo">
+          {%- if post.repo-url -%}
+          <a href="{{ post.repo-url }}" target="_blank" class="icon-browser" title="Website for {{ post.title }}">
+            <img src="assets/github-character.png" />
+          </a>
+          {%- endif -%}
+        </td>
+        <td class="lesson-maintainer">{{ post.maintainers }}</td>
+      </tr>
       {%- endfor -%}
-    </ul>
+    </table>
 
-    <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
   {%- endif -%}
 
+  <p class="attribution">Icons made by <a href="https://www.flaticon.com/authors/dave-gandy" title="Dave Gandy">Dave Gandy</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a></p>
 </div>

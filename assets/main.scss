@@ -4,6 +4,52 @@
 
 @import "minima";
 
+hr {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: 0;
+  border-top-color: currentcolor;
+  border-top-style: none;
+  border-top-width: 0px;
+  border-top: 1px solid #eeeeee;
+}
+
+a, a:visited {
+  color: green;
+}
+
+.attribution {
+  font-size: 11px;
+  font-style: italic;
+  font-color: grey;
+}
+
+/** TABLES **/
+table {
+  background: #fff;
+  margin-bottom: 1.25rem;
+  border: solid 1px #ddd;
+  table-layout: auto;
+  border-collapse: collapse;
+  border-spacing: 0;
+  font-size: 16px;
+}
+table tr th {
+  background-color: #314355;
+  color: white;
+  font-weight: bold;
+}
+th.lesson-site, th.lesson-repo, td.lesson-site, td.lesson-repo {
+  width: 80px;
+  text-align: center;
+}
+th.lesson-maintainer, td.lesson-maintainer {
+  width: 100px;
+}
+td.lesson-maintainer {
+  font-size: 11px;
+}
+
 /** HEADER **/
 .site-header {
   background: url('/assets/banner.jpg');
