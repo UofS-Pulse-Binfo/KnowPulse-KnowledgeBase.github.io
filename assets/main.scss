@@ -3,3 +3,42 @@
 ---
 
 @import "minima";
+
+/** HEADER **/
+.site-header {
+  background: url('/assets/banner.jpg');
+}
+.site-title, .site-title:visited {
+  color: white;
+  font-weight:600;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+.site-nav .page-link {
+  color: white;
+  font-weight:600;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+/** FOOTER **/
+.footer-container {
+  background-color:#161617;
+  color: white;
+  padding-right: 30px;
+  padding-left: 30px;
+}
+footer {
+  width: 1170px;
+  height: 100px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 40px;
+}
+#footer-citation {
+  float: left;
+  width: 60%;
+}
+#footer-logos {
+  float: right;
+  width: 300px;
+  margin-top: 15px;
+}
