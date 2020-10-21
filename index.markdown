@@ -9,7 +9,7 @@ layout: home
 
 <p>{{- site.description | escape -}}</p>
 
-<p style="font-style: italic; text-align:center;">This knowledgebase is inspired by <a href="https://carpentries.org/">The Carpentries</a>.<br />For more information on this style of teaching see their paper <a href="http://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.1001745">"Best Practices for Scientific Computing"</a>.</p>
+<p style="font-style: italic; text-align:center;">This knowledgebase is inspired by <a href="https://carpentries.org/">The Carpentries</a>.<br />For more information on this style of teaching<br />see their paper <a href="http://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.1001745">"Best Practices for Scientific Computing"</a>.</p>
 
 <hr>
 
@@ -26,13 +26,7 @@ layout: home
 
 <p id="contact">
   <strong>Contact:</strong>
-  Please email
-  {% if site.email %}
-    <a href='mailto:{{ site.email }}'>{{ site.email }}</a>
-  {% else %}
-    to-be-announced
-  {% endif %}
-  for more information.
+  Please email <img height="22px" src="assets/contact.png"> for more information.
 </p>
 
 <hr/>
